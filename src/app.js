@@ -5,6 +5,7 @@ const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 
 const app=express()
+const port=process.env.PORT || 3000
 
 //__dirname returns path to current directory
 //this command removes src from path and appends public to it.
@@ -83,6 +84,6 @@ app.get('*',(req,res)=>{
 // })
 
 
-app.listen(3000,()=>{
-    console.log('Setting up server on localhost 3000')
+app.listen(port,()=>{
+    console.log('Setting up server on '+port)
 })
